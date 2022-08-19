@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from todo.views import say_hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/', say_hello, name='hello') #get 3 parameters : first is the path, second in the function and the third is the name
+
 ]
